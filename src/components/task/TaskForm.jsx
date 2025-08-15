@@ -24,7 +24,7 @@ const TaskForm = ({ open, onClose, onSubmit, task}) => {
                             priority: task?.priority || 'LOW',
                             status: task?.status || 'PENDING',
                             dueDate: task?.dueDate ? task.dueDate.slice(0, 16) : '',
-                            category: task?.category?.name || ' '}}
+                            category: task?.category || ' '}}
             validationSchema={taskSchema}
             onSubmit={onSubmit}
         >
